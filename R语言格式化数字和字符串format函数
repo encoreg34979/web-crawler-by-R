@@ -1,0 +1,52 @@
+
+数字和字符串可以使用 format()函数的格式化为特定样式。
+
+语法
+format()函数的基本语法是：
+
+format(x, digits, nsmall,scientific,width,justify = c("left", "right", "centre", "none"))     
+以下是所使用的参数的说明：
+
+x - 为向量输入
+digits - 是显示总位数
+nsmall - 是最小位数的小数点右边
+scientific - 设置为TRUE，则显示科学记数法
+width - 指示要通过填充空白在开始时显示的最小宽度
+justify - 是字符串显示在左边，右边或中心
+示例
+# Total number of digits displayed. Last digit rounded off.
+result <- format(23.123456789, digits = 9)
+print(result)
+
+# Display numbers in scientific notation.
+result <- format(c(6, 13.14521), scientific = TRUE)
+print(result)
+
+# The minimum number of digits to the right of the decimal point.
+result <- format(23.47, nsmall = 5)
+print(result)
+
+# Format treats everything as a string.
+result <- format(6)
+print(result)
+
+# Numbers are padded with blank in the beginning for width.
+result <- format(13.7, width = 6)
+print(result)
+
+# Left justify strings.
+result <- format("Hello",width = 8, justify = "l")
+print(result)
+
+# Justfy string with center.
+result <- format("Hello",width = 8, justify = "c")
+print(result)
+当我们上面的代码执行时，它产生以下结果：
+
+[1] "23.1234568"
+[1] "6.000000e+00" "1.314521e+01"
+[1] "23.47000"
+[1] "6"
+[1] "  13.7"
+[1] "Hello   "
+[1] " Hello  "
