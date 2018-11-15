@@ -1,0 +1,11 @@
+操作名称	文件操作	目录操作	 
+创建	file.create()	dir.create()	 
+查看	list.files()	list.dirs()	 
+读取	readLines()	-	 
+重命名	file.rename()	file.rename()	 
+复制	file.copy()	-	 
+追加	file.append()	-	 
+删除	file.remove()	unlink()	 
+权限查看	file.info()	file.info()	 
+权限查看	file.access()	file.access()	 
+权限修改	Sys.chomod()	Sys.chomod()	 
